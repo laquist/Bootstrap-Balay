@@ -14,10 +14,13 @@
 aside {
     background-color: #2C2C2C;
     font-family: "Quicksand", Arial, sans-serif;
+    height: 100vh;
+    width: 19vw;
 }
 
-    aside h4 {
+    aside h5 {
         font-weight: 700;
+        letter-spacing: 2px;
     }
 
     nav ul li {
@@ -25,8 +28,22 @@ aside {
     }
 
         nav ul li a {
-            color: rgba(255, 255, 255, 0.3);
-            text-decoration: none; 
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        nav ul li a:after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            bottom: 7px;
+            left: 0;
+            right: 0;
+            background-color: #FFC300;
+            visibility: hidden;
         }
 
         nav ul li a:hover {
@@ -36,7 +53,14 @@ aside {
         nav ul li .active {
             color: #FFC300;
         }
+        
+        nav ul li .active:after {
+            visibility: visible;
+        }
+
 
 #mainContent {
     background-color: red;
+    /* height: 100vh; */
+    width: 81vw;
 }
