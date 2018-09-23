@@ -1,0 +1,42 @@
+/* Fixed sidebar */
+#TEMPfixedSideBar { 
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 19%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+
+    background-color: #2C2C2C;
+}
+
+aside {
+    background-color: #2C2C2C;
+    font-family: "Quicksand", Arial, sans-serif;
+}
+
+    aside h4 {
+        font-weight: 700;
+    }
+
+    nav ul li {
+        list-style: none;
+    }
+
+        nav ul li a {
+            color: rgba(255, 255, 255, 0.3);
+            text-decoration: none; 
+        }
+
+        nav ul li a:hover {
+            color: white;
+        }
+
+        nav ul li .active {
+            color: #FFC300;
+        }
+
+#mainContent {
+    background-color: red;
+}
