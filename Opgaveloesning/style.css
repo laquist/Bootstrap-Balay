@@ -1,3 +1,25 @@
+/* ToDo:
+    - Google: Hvad er den bedste fordeling af egen CSS og Bootstraps classes?
+    - f.eks. at jeg har d-inline-block position-relative px-0 på alle mine ul>li>a tags i min nav.
+    - Så bruger jeg jo Bootstraps, men det er mere kode end hvis jeg lige lavede min egen class. 
+    - (Men tag højde for her at bootstrap måske overskriver. Jeg prøvede at give d-inline-block i egen CSS, men synes ikke det virkede, men det gjorde det så snart jeg gjorde det igennem bootstraps
+
+
+    - Hele 'nav ul li a' delen. Har jeg helt styr på hvordan hover effekten fungerer?
+    - Har jeg styr på transform, transition?
+    - Har jeg styr på :before, :after, :hover, og behøver jeg så mange forskellige?
+    - Hvad betyder a:hover:after? Hvorfor er det ikke det samme som a:after eller a:hover?
+    - Kan det gøres smartere?
+
+
+    - FaceBook, Twitter, Instagram, LinkedIN icons i bunden af footer
+
+    - Del CSS ordenligt op evt. med comments (bare udseende og struktur)
+
+
+*/
+
+
 /* Fixed sidebar */
 #TEMPfixedSideBar { 
     height: 100%; /* Full-height: remove this if you want "auto" height */
@@ -11,56 +33,127 @@
     background-color: #2C2C2C;
 }
 
+body {
+    /* font-family: "Quicksand", Arial, sans-serif; */
+}
+
+#fullPageContainer {
+    /* Hides horizontal scroll bar */
+    overflow-x: hidden;
+}
+
 aside {
     background-color: #2C2C2C;
     font-family: "Quicksand", Arial, sans-serif;
-    height: 100vh;
-    width: 19vw;
+    /* height: 100vh; */
+    /* width: 19vw; */
+
+
+    /* left: 0; */
+    /* bottom: 0; */
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    
 }
 
-    aside h5 {
-        font-weight: 700;
-        letter-spacing: 2px;
-    }
+aside h5 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
 
-    nav ul li {
-        list-style: none;
-    }
+nav ul li {
+    list-style: none;
+}
 
-        nav ul li a {
-            color: rgba(255, 255, 255, 0.5);
-            text-decoration: none;
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 1px;
-        }
+nav ul li a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
 
-        nav ul li a:after {
-            content: "";
-            position: absolute;
-            height: 1px;
-            bottom: 7px;
-            left: 0;
-            right: 0;
-            background-color: #FFC300;
-            visibility: hidden;
-        }
+nav ul li a:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    bottom: 7px;
+    left: 0;
+    right: 0;
+    background-color: #FFC300;
+    visibility: hidden;
 
-        nav ul li a:hover {
-            color: white;
-        }
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
 
-        nav ul li .active {
-            color: #FFC300;
-        }
-        
-        nav ul li .active:after {
-            visibility: visible;
-        }
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+nav ul li a:hover:after {
+    visibility: visible;
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+}
+
+nav ul li .active {
+    color: #FFC300;
+}
+
+nav ul li .active:hover {
+    color: #FFC300;
+}
+
+nav ul li .active:after {
+    visibility: visible;
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+}
+
+footer {
+    position: absolute;
+    bottom: 40px;
+}
+
+footer small {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.8rem;
+}
+
+footer small a {
+    color: #FFC300;
+}
+
+footer small a:hover {
+    color: #FFC300;
+    text-decoration: none;
+}
+
+#icons {
+    height: 27px;
+}
 
 
 #mainContent {
     background-color: red;
+    /* width: 81vw; */
+}
+
+#mainCarousel {
+    /* width: auto; */
     /* height: 100vh; */
-    width: 81vw;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+#test {
+    height: 100px;
 }
