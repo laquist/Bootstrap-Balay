@@ -18,6 +18,10 @@
 <body>
     <div class="container-fluid p-0" id="fullPageContainer">
         <div class="row">
+            <!-- #sideBarSpaceContainer er til for at fylde det samme som sidebaren, så
+                #mainContent bliver skubbet ud ved siden af sidebaren, i stedet for at 
+                #mainContent bare starter helt inde til venstre og ligger under sidebaren -->
+            <div id="sideBarSpaceContainer" class="col-2"></div>
             <aside class="col-2 p-4 text-center position-fixed">
                 <h5 class="text-white text-uppercase py-4">Balay</h5>
 
@@ -44,7 +48,7 @@
                     </ul>
                 </nav>
 
-                <footer class="text-center">
+                <footer class="text-center m-2">
                     <small>
                         © <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         Copyright ©2018 All rights reserved | This template is made with ♥ by <a href="https://colorlib.com" target="_blank">Colorlib</a> 
@@ -89,9 +93,7 @@
                     </a> -->
                 </div>
 
-                <div id="test">
-                    <p>test</p>
-                </div>
+                <div id="test"><p>test</p></div>
             </div>
         </div>
     </div>
