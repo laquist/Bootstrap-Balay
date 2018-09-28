@@ -1,22 +1,18 @@
 /* ToDo:
-    - Google: Hvad er den bedste fordeling af egen CSS og Bootstraps classes?
-    - f.eks. at jeg har d-inline-block position-relative px-0 på alle mine ul>li>a tags i min nav.
-    - Så bruger jeg jo Bootstraps, men det er mere kode end hvis jeg lige lavede min egen class. 
-    - (Men tag højde for her at bootstrap måske overskriver. Jeg prøvede at give d-inline-block i egen CSS, men synes ikke det virkede, men det gjorde det så snart jeg gjorde det igennem bootstraps
-
-
     - Hele 'nav ul li a' delen. Har jeg helt styr på hvordan hover effekten fungerer?
     - Har jeg styr på transform, transition?
-    - Har jeg styr på :before, :after, :hover, og behøver jeg så mange forskellige?
+    - Har jeg styr på ::before, ::after, :hover, og behøver jeg så mange forskellige?
     - Hvad betyder a:hover:after? Hvorfor er det ikke det samme som a:after eller a:hover?
     - Kan det gøres smartere?
 
 
     - FaceBook, Twitter, Instagram, LinkedIN icons i bunden af footer
-
+    
+    - Comments i HTML. Og tjek om jeg har ligegyldige divs osv.
     - Del CSS ordenligt op evt. med comments (bare udseende og struktur)
 
-
+    - Lav col- størrelser når man gør siden mindre!
+    - Test på smartphone! (Specielt også height på figcaption i carousel)
 */
 
 #fullPageContainer {
@@ -125,9 +121,11 @@ footer small a:hover {
 }
 
 #mainContent {
-    /* For at den ikke overlapper lidt af sidebaren skal den være 332 i stedet for 320 */
-    /* position: relative; */
-    /* left: 332px; */
+
+}
+
+#mainCarousel {
+    width: 100%;
 }
 
 /* Carousel Indicators/Buttons */
@@ -157,13 +155,23 @@ footer small a:hover {
     border-radius: 50%;
 }
 
-
 .carousel-item img {
     height: 100vh;
     max-height: 100vh;
 
     object-fit: cover;
     object-position: 100% 100%;
+}
+
+#mainCarousel figcaption {
+    background-color: #FFC300;
+
+    width: 32%;
+    height: 237px; 
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 #test {
