@@ -59,7 +59,7 @@ nav ul li a {
     letter-spacing: 1px;
 }
 
-nav ul li a:after {
+nav ul li a::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -80,7 +80,7 @@ nav ul li a:hover {
     color: white;
 }
 
-nav ul li a:hover:after {
+nav ul li a:hover::after {
     visibility: visible;
     transform: scaleX(1);
     -webkit-transform: scaleX(1);
@@ -94,7 +94,7 @@ nav ul li .active:hover {
     color: #FFC300;
 }
 
-nav ul li .active:after {
+nav ul li .active::after {
     visibility: visible;
     transform: scaleX(1);
     -webkit-transform: scaleX(1);
@@ -125,12 +125,41 @@ footer small a:hover {
 }
 
 #mainContent {
-    position: relative;
     /* For at den ikke overlapper lidt af sidebaren skal den være 332 i stedet for 320 */
+    /* position: relative; */
     /* left: 332px; */
 }
 
+/* Carousel Indicators/Buttons */
+#mainCarousel ol {
+    right: auto;
+}
+
+#mainCarousel ol li {
+    height: 12px;
+    width: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#mainCarousel ol .active {
+    background-color: transparent;
+}
+
+#mainCarousel ol .active::after {
+    height: 12px;
+    width: 12px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    border: 2px solid #FFC300;
+    border-radius: 50%;
+}
+
+
 .carousel-item img {
+    height: 100vh;
     max-height: 100vh;
 
     object-fit: cover;
